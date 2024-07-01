@@ -8,12 +8,12 @@ app.get("/", (req, res) => {
   res.status(200).json(data)
 })
 
-// app.use(express.json())
-// app.post("/", (req, res) => {
-//   const { name } = req.body
+app.use(express.json())
+app.post("/", (req, res) => {
+  const { name } = req.body
 
-//   res.send(`Welcome ${name}`)
-// })
+  res.send(`Welcome ${name}`)
+})
 
 app.listen(PORT, (error) => {
   if (!error) {
